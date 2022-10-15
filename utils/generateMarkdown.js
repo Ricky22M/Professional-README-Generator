@@ -1,5 +1,6 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+/* FUNCTIONS */
+
+// This function is used to capture the license of the license badge that the user has passed through from their input and render the badge, if any were passed in
 function renderLicenseBadge(license) {
   if (license === "") {
     return "";
@@ -8,12 +9,11 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// This function is used to render the link for the license that the user has passed in through their input, if any were passed in
 function renderLicenseLink(license) {
   switch (license) {
     case "None":
-      return "No licenses were used for this project";
+      return "";
     case "Apache License 2.0":
       return "http://www.apache.org/licenses/";
     case "GNU General Public License v3.0":
@@ -23,8 +23,7 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Creates a section for the license badge to be applied in the README.md file, if any were passed in
 function renderLicenseSection(license) {
   if (license == "") {
     return "";
@@ -33,7 +32,7 @@ function renderLicenseSection(license) {
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// This function is used to create a README.md file with this same format for the newly created README.md files used with running this code in node
 function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseSection(data.license)}
@@ -84,4 +83,7 @@ function generateMarkdown(data) {
 `;
 }
 
+/* EXEPORTING MODULE */
+
+// Used to give data to the index.js file to create a README.md file with the user input
 module.exports = generateMarkdown;

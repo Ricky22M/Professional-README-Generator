@@ -1,9 +1,12 @@
-// TODO: Include packages needed for this application
+/* DEFINED ALL CONST VARIABLES */
+
+// These const variables are used to get and use information from the npm installations
 const inquirer = require('inquirer');
 const fs = require('fs');
+// This const varaible is used to display the information from this JS page on to the "generateMarkDown" JS creating a connection between the two
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// Used to ask the user questions to help generate a professional README.md file
 const questions = [
     {
         type: 'input',
@@ -17,7 +20,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'How will this projected be installed?',
+        message: 'How will this project be installed?',
         name: 'installation',
     },
     {
@@ -53,7 +56,9 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
+/* DEFINED FUNCTIONS */
+
+// This function is used to create a README.md file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
       if (err) {
@@ -63,13 +68,15 @@ function writeToFile(fileName, data) {
     });
 }
 
-// TODO: Create a function to initialize app
+// This function is used to give the user questions, then create the README.md file based off of the user input
 function init() {
     inquirer.prompt(questions).then((res) => {
         console.log(res);
         writeToFile('./README.md', generateMarkdown(res));
     });
 }
+
+/* CALLING FUNCTION */
 
 // Function call to initialize app
 init();
