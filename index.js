@@ -8,43 +8,43 @@ const questions = [
     {
         type: 'input',
         message: 'What is the name of your new project?',
-        name: 'Project Title',
+        name: 'title',
     },
     {
         type: 'input',
         message: 'Give the description to your new project?',
-        name: 'Description',
+        name: 'description',
     },
     {
         type: 'input',
         message: 'How will this projected be installed?',
-        name: 'Installation',
+        name: 'installation',
     },
     {
         type: 'input',
         message: 'What will this project be used for?',
-        name: 'Usage',
+        name: 'usage',
     },
     {
         type: 'input',
         message: 'Who are the contributors to this project',
-        name: 'Contributing',
+        name: 'contributing',
     },
     {
         type: 'input',
         message: 'How can you run your code to test the functionality of your code?',
-        name: 'Test',
+        name: 'test',
     },
     {
         type: 'checkbox',
         message: 'What license was used?',
-        name: 'License(s)',
+        name: 'license',
         choices: ['None', 'Apache License 2.0', 'GNU General Public License v3.0', 'MIT License'],
     },
     {
         type: 'input',
         message: 'Please enter GitHub username',
-        name: 'Account',
+        name: 'account',
     },
     {
         type: 'input',
