@@ -58,7 +58,7 @@ function generateMarkdown(data) {
   
   ## Contributing
   
- ${data.contributing}
+  ${data.contributing}
   
   ## License
   
@@ -71,10 +71,10 @@ function generateMarkdown(data) {
   ## Questions
   
   * [Github](https://github.com/${data.account})
-  * For any more questions, reach me at my [email](${data.email})
+  * I am reachable at [email](${data.email}) for any additonal questions you may have.
   
   ## Contributing
-  
+  ******* Need to fix this error *******
   [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
   
   ## Test
