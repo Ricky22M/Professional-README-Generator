@@ -46,10 +46,10 @@ const questions = [
     },
     // Asks for License
     {
-        type: 'checkbox',
+        type: 'list',
         message: 'What license was used?',
         name: 'license',
-        choices: ['None', 'Apache License 2.0', 'GNU General Public License v3.0', 'MIT License'],
+        choices:['MIT', 'ISC', 'GNU GPL v3'],
     },
     // Asks for GitHub
     {

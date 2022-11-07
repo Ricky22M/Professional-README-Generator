@@ -15,24 +15,23 @@ function renderLicenseBadge(license) {
 
 // This function is used to render the link for the license that the user has passed in through their input, if any were passed in
 function renderLicenseLink(license) {
-  switch (license) {
-    case "None":
-      return "";
-    case "Apache License 2.0":
-      return "http://www.apache.org/licenses/";
-    case "GNU General Public License v3.0":
-      return "https://www.gnu.org/licenses/";
-    case "MIT License":
-      return "https://opensource.org/licenses/MIT";
+  if (!license) {
+    return ``;
+  } else if (license === 'ISC') {
+    return `https://choosealicense.com/licenses/isc/`
+  } else if (license === 'MIT') {
+    return `https://choosealicense.com/licenses/mit/`
+  } else if (license === 'GNU GPL v3') {
+    return `https://choosealicense.com/licenses/gpl-3.0/`
   }
 }
 
 // Creates a section for the license badge to be applied in the README.md file, if any were passed in
 function renderLicenseSection(license) {
-  if (license == "") {
-    return "";
+  if (!license) {
+    return ``;
   } else {
-    return renderLicenseBadge(license);
+    return `This project is under the the ${license} license.`
   }
 }
 
