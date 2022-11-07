@@ -2,10 +2,14 @@
 
 // This function is used to capture the license of the license badge that the user has passed through from their input and render the badge, if any were passed in
 function renderLicenseBadge(license) {
-  if (license === "") {
-    return "";
-  } else {
-    return `[!${license}](${renderLicenseLink(license)})`;
+  if (!license) {
+    return ``;
+  } else if (license === 'ISC') {
+    return `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`
+  } else if (license === 'MIT') {
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+  } else if (license === 'GNU GPL v3') {
+    return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
   }
 }
 
@@ -35,51 +39,37 @@ function renderLicenseSection(license) {
 // This function is used to create a README.md file with this same format for the newly created README.md files used with running this code in node
 function generateMarkdown(data) {
   return `# ${data.title}
-  ${renderLicenseSection(data.license)}
-  ## Description
 
+  ${renderLicenseBadge(data.license)}
+
+  ## Description
   ${data.description}
   
   ## Table of Contents
-  
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Contributing](#contributoring)
+  * [Contributing](#contributing)
   * [License](#license)
   
-  
   ## Installation
-  
   ${data.installation}
   
-  ## Usage 
-  
+  ## Usage
   ${data.usage}
+
+  ## License
+  ${renderLicenseSection(data.license)}
   
   ## Contributing
-  
   ${data.contributing}
-  
-  ## License
-  
-  This project is licensed under the ${data.license}
-  
-  ## Badges
-  
-  ${renderLicenseSection(data.license)}
+
+  ## Test
+  ${data.test}
 
   ## Questions
-  
   * [Github](https://github.com/${data.account})
-  * I am reachable at [email](${data.email}) for any additonal questions you may have.
+  * I am reachable at ${data.email} for any additonal questions you may have.
   
-  ## Contributing
-  ******* Need to fix this error *******
-  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
-  
-  ## Test
-  
-  ${data.test}
 `;
 }
 
