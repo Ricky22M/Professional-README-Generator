@@ -38,4 +38,4 @@ THEN I am taken to the corresponding section of the README
 
 ## Walkthrough Video
 
-[Walkthrough video of working application](./sample/assets/video/Professional%20README%20Generator.webm)
+[Walkthrough video of working application](https://drive.google.com/file/d/1sYv5to1H83VmSMYDijCwh8gRYZxi88zW/view?usp=share_link)
