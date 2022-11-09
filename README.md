@@ -2,9 +2,7 @@
 
 Want to create a fast, professional README.md file without having to do any of the hard-coding? Well you have come to the right place! Here I have created a project in which the user is able to create a professional README.md file with the use of the user input.
 
-[//]: <> (We need to add a image of the sample README.md file here)
-
-[Screenshot of application]()
+![Screenshot of application](./sample/assets/image/VSCode-screenshot.png)
 
 ## How Does This Work?
 
@@ -40,6 +38,4 @@ THEN I am taken to the corresponding section of the README
 
 ## Walkthrough Video
 
-[//]: <> (We need to add the walkthrough video here)
-
-[Walkthrough video of working application]()
+[Walkthrough video of working application](./sample/assets/video/Professional%20README%20Generator.webm)
